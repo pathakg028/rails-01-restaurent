@@ -1,0 +1,10 @@
+<h1>Restaurants</h1>
+
+<ul>
+    <% @restaurants.each_with_index do |restaurant, index| %>
+        <li>
+            <p><%= restaurant.title %> - <%= restaurant.food_type %> <%= link_to "show", restaurant_path(restaurant.id) %></p>
+            <p>Reviews: <%= restaurant.reviews.count %></p>
+        </li>
+    <% end %>
+</ul>
